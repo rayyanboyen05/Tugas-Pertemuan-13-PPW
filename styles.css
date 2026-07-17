@@ -1,90 +1,92 @@
-/* Reset basic layout & font */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f7f6;
+/* --- Base Styling --- */
+html, body {
     margin: 0;
     padding: 0;
-    color: #333;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: #faf9f6;
+    color: #2b2b2b;
+    -webkit-font-smoothing: antialiased;
 }
 
-/* Container utama form */
-.container {
-    max-width: 500px;
-    margin: 50px auto;
-    background: #ffffff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+/* --- Layout Box --- */
+.card-wrapper {
+    max-width: 460px;
+    margin: 60px auto;
+    background-color: #ffffff;
+    padding: 40px 32px;
+    border: 1px solid #eae7e1;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.02);
 }
 
-/* Judul Form */
-.container h2 {
-    text-align: center;
-    color: #2c3e50;
-    margin-bottom: 25px;
-    font-size: 24px;
+/* --- Header Text --- */
+.card-title {
+    margin: 0 0 30px 0;
+    font-size: 22px;
     font-weight: 600;
+    letter-spacing: -0.5px;
+    color: #1a1a1a;
 }
 
-/* Membungkus label dan input agar rapi ke bawah */
-.form-group {
-    margin-bottom: 20px;
+/* --- Form Fields Layout --- */
+.field-block {
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
-/* Styling Label */
-.form-group label {
-    display: block;
+/* --- Typography Control --- */
+.field-label {
+    font-size: 13px;
+    font-weight: 500;
+    color: #666666;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* --- Interactive Elements --- */
+.input-control,
+.select-control {
+    width: 100%;
+    padding: 10px 14px;
     font-size: 14px;
-    font-weight: 600;
-    margin-bottom: 8px;
-    color: #555;
+    color: #2b2b2b;
+    background-color: #ffffff;
+    border: 1.5px solid #dcdad4;
+    border-radius: 8px;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Styling Input & Select Box */
-.form-group input[type="text"],
-.form-group input[type="email"],
-.form-group select {
+/* --- Interactive States --- */
+.input-control:focus,
+.select-control:focus {
+    border-color: #e07a5f;
+    box-shadow: 0 0 0 3px rgba(224, 122, 95, 0.15);
+}
+
+/* --- Action Button --- */
+.action-trigger {
     width: 100%;
     padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 15px;
-    box-sizing: border-box;
-    /* Memastikan padding tidak merusak lebar input */
-    transition: all 0.3s ease;
-    background-color: #fafafa;
-}
-
-/* Efek fokus saat input diklik */
-.form-group input:focus,
-.form-group select:focus {
-    border-color: #3498db;
-    background-color: #fff;
-    box-shadow: 0 0 8px rgba(52, 152, 219, 0.2);
-    outline: none;
-}
-
-/* Styling Tombol Submit */
-.btn-submit {
-    width: 100%;
-    background-color: #3498db;
-    color: white;
-    padding: 14px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #e07a5f;
     border: none;
-    border-radius: 6px;
-    font-size: 16px;
-    font-weight: bold;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.1s ease;
-    margin-top: 10px;
+    transition: background-color 0.2s ease, opacity 0.1s ease;
 }
 
-/* Efek hover tombol */
-.btn-submit:hover {
-    background-color: #2980b9;
+/* --- Button States --- */
+.action-trigger:hover {
+    background-color: #cf6b50;
 }
 
-/* Efek klik tombol */
-.btn-submit:active {
-    transform: scale(0.98);
+.action-trigger:active {
+    opacity: 0.85;
 }
