@@ -1,92 +1,90 @@
-/* --- Base Styling --- */
+/* Reset layout dasar & tipografi */
 html, body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #0f172a;
     margin: 0;
     padding: 0;
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
-    background-color: #faf9f6;
-    color: #2b2b2b;
-    -webkit-font-smoothing: antialiased;
+    color: #f1f5f9;
 }
 
-/* --- Layout Box --- */
-.card-wrapper {
-    max-width: 460px;
+/* Panel utama pembungkus form */
+.form-card {
+    max-width: 480px;
     margin: 60px auto;
-    background-color: #ffffff;
-    padding: 40px 32px;
-    border: 1px solid #eae7e1;
+    background-color: #1e293b;
+    padding: 32px;
     border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.02);
+    border: 1px solid #334155;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
 }
 
-/* --- Header Text --- */
-.card-title {
-    margin: 0 0 30px 0;
+/* Header utama dalam form */
+.form-card__title {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 28px;
     font-size: 22px;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: -0.5px;
-    color: #1a1a1a;
 }
 
-/* --- Form Fields Layout --- */
-.field-block {
+/* Jarak baris tiap elemen input */
+.input-row {
     margin-bottom: 24px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
 }
 
-/* --- Typography Control --- */
-.field-label {
+/* Label penunjuk input */
+.input-row label {
+    display: inline-block;
     font-size: 13px;
     font-weight: 500;
-    color: #666666;
+    margin-bottom: 6px;
+    color: #94a3b8;
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
 
-/* --- Interactive Elements --- */
-.input-control,
-.select-control {
+/* Kontrol input teks, email, dan dropdown */
+.input-field {
     width: 100%;
     padding: 10px 14px;
-    font-size: 14px;
-    color: #2b2b2b;
-    background-color: #ffffff;
-    border: 1.5px solid #dcdad4;
+    border: 1.5px solid #475569;
     border-radius: 8px;
-    box-sizing: border-box;
-    outline: none;
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-/* --- Interactive States --- */
-.input-control:focus,
-.select-control:focus {
-    border-color: #e07a5f;
-    box-shadow: 0 0 0 3px rgba(224, 122, 95, 0.15);
-}
-
-/* --- Action Button --- */
-.action-trigger {
-    width: 100%;
-    padding: 12px;
-    margin-top: 8px;
     font-size: 14px;
-    font-weight: 600;
+    box-sizing: border-box;
+    transition: border-color 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s ease;
+    background-color: #0f172a;
     color: #ffffff;
-    background-color: #e07a5f;
+}
+
+/* Respons visual ketika elemen aktif */
+.input-field:focus {
+    border-color: #10b981;
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15);
+    outline: none;
+}
+
+/* Tombol aksi utama */
+.action-button {
+    width: 100%;
+    background-color: #10b981;
+    color: #0f172a;
+    padding: 12px;
     border: none;
     border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.2s ease, opacity 0.1s ease;
+    transition: background-color 0.2s ease, opacity 0.2s ease;
+    margin-top: 6px;
 }
 
-/* --- Button States --- */
-.action-trigger:hover {
-    background-color: #cf6b50;
+/* Interaksi saat kursor di atas tombol */
+.action-button:hover {
+    background-color: #059669;
 }
 
-.action-trigger:active {
-    opacity: 0.85;
+/* Interaksi saat tombol ditekan */
+.action-button:active {
+    opacity: 0.9;
 }
