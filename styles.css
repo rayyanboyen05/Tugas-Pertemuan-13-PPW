@@ -1,0 +1,90 @@
+/* Reset basic layout & font */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Container utama form */
+.container {
+    max-width: 500px;
+    margin: 50px auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Judul Form */
+.container h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 25px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/* Membungkus label dan input agar rapi ke bawah */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Styling Label */
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+/* Styling Input & Select Box */
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    box-sizing: border-box;
+    /* Memastikan padding tidak merusak lebar input */
+    transition: all 0.3s ease;
+    background-color: #fafafa;
+}
+
+/* Efek fokus saat input diklik */
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #3498db;
+    background-color: #fff;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.2);
+    outline: none;
+}
+
+/* Styling Tombol Submit */
+.btn-submit {
+    width: 100%;
+    background-color: #3498db;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    margin-top: 10px;
+}
+
+/* Efek hover tombol */
+.btn-submit:hover {
+    background-color: #2980b9;
+}
+
+/* Efek klik tombol */
+.btn-submit:active {
+    transform: scale(0.98);
+}
